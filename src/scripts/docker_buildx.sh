@@ -57,7 +57,7 @@ if [ "${ORB_BOOL_SKIP_WHEN_TAGS_EXIST}" -eq "0" ] || [[ "${ORB_BOOL_SKIP_WHEN_TA
       aws ecr put-lifecycle-policy \
         --profile "${ORB_EVAL_PROFILE_NAME}" \
         --repository-name "${ORB_EVAL_REPO}" \
-        --lifecycle-policy-text "file://${ORB_EVAL_LIFECYCLE_POLICY_PATH}"        
+        --lifecycle-policy-text "file://${ORB_EVAL_LIFECYCLE_POLICY_PATH}"
     fi
 
   elif [ "${ORB_BOOL_PUSH_IMAGE}" -eq "0" ] && [ "${number_of_platforms}" -le 1 ];then
